@@ -1,0 +1,29 @@
+﻿@page "/"
+@attribute [Authorize]
+
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
+@if (!HttpContextAccessor.HttpContext.User.Identity.IsAuthenticated)
+{
+    <p>Please log in to continue.</p>
+}
+else
+{
+    <p>Select a room to join or create a new one.</p>
+    <select @onchange="OnRoomSelected">
+        <option value="">-- Select a room --</option>
+        @if (rooms is null)
+        {
+            <p>Loading rooms...</p>
+        }
+        else
+        {
+            @foreach (var room in rooms)
+            {
+                <option value="@room.Id">@room.Name</option>
+            }
+        }
+    </select>
+    <button @onclick="CreateRoomAsync" title="DOUBLE ENTER TO INPUT">Create new room</button>
+    <input @bind="NewRoomName" placeholder="New room name" @onkeydown="CheckForEnterKey" title="DOUBLE ENTER TO INPUT" />
+}

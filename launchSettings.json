@@ -1,0 +1,18 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "composeLaunchAction": "LaunchBrowser",
+      "composeLaunchServiceName": "chat.blazorchat",
+      "composeLaunchUrl": "{Scheme}://localhost:{ServicePort}",
+      "serviceActions": {
+        "chat.blazorchat": "StartDebugging",
+        "rabbitmq": "StartWithoutDebugging",
+        "signalrhub": "StartDebugging",
+        "sql.data": "StartWithoutDebugging",
+        "chat.decoupledbot": "StartDebugging"
+      }
+    }
+  }
+}

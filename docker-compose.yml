@@ -1,0 +1,37 @@
+version: '3.4'
+
+services:
+
+  sql.data:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+     
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+
+  chat.signalrhub:
+    image: ${DOCKER_REGISTRY-}chatsignalrhub
+    build:
+      context: .
+      dockerfile: Chat.SignalRHub/Dockerfile
+    ports:
+      - "7135:7135"
+
+  chat.decoupledbot:
+    image: ${DOCKER_REGISTRY-}chatdecoupledbot
+    build:
+      context: .
+      dockerfile: Chat.DecoupledBot/Dockerfile
+    ports:
+      - "32728:32728"
+
+  chat.blazorchat:
+    image: ${DOCKER_REGISTRY-}chatblazorchat
+    build:
+      context: .
+      dockerfile: Chat.BlazorChat/Dockerfile
+    ports:
+      - "7136:7136"
+    depends_on:
+      - sql.data
+      - rabbitmq
+      - signalrhub

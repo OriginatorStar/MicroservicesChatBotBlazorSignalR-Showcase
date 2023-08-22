@@ -1,0 +1,15 @@
+﻿@using Chat.BlazorChat.Data.Model;
+@using Chat.BlazorChat.Services;
+@using Microsoft.AspNetCore.Components;
+@using Microsoft.AspNetCore.Components.Authorization;
+@using Microsoft.AspNetCore.Identity
+@using Chat.BlazorChat.Areas.Identity
+@using Microsoft.AspNetCore.SignalR.Client;
+@inject IRoomService roomService
+@inject NavigationManager navigationManager
+@inject ChatService chatService
+@inject UserManager<User> userManager
+@inject AuthenticationStateProvider authenticationStateProvider
+
+Chat.BlazorChat.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
