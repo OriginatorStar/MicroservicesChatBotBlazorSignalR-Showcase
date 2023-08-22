@@ -40,8 +40,8 @@ The general layout of the project is the following: A Blazor FE application, the
 ### Complete Requirement Challenge Document.
 
 ### Description
-This project is designed to test your knowledge of back-end web technologies, specifically in
-.NET and assess your ability to create back-end products with attention to details, standards,
+This project is designed to showcase my knowledge of back-end web technologies, specifically in
+.NET and showcase my ability to create back-end products with attention to details, standards,
 and reusability.
 
 ### Assignment
