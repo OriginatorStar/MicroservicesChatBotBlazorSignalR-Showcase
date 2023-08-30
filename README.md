@@ -9,10 +9,10 @@
 
 ### Intro
 
-Hi! I am Ariel Altamirano, a .Net developer with more than 15 years of experience in Microsoft .Net all around stacks and technologies. I live in Buenos Aires, Argentina, with my wife and my little child.
+Hi! I am Ariel Altamirano, a .Net Cloud Engineer with more than 16 years of experience in Microsoft .Net all around stacks and technologies. I live in Buenos Aires, Argentina, with my wife and my little child.
 
 This application can be launched by:
-(If by setting as startup project the "docker-compose" one and pressing the "Docker Compose" button up there does not work because I did not fix it yet, do the following. I'll fix it when you ask me and push the changes.)
+(If by setting as startup project the "docker-compose" one and pressing the "Docker Compose" button up there does not work because I did not fix it yet, do the following. I'll fix it when you ask me to do so and I'll push the changes for you (let's keep showcasing...).)
 
  - Right click on the "dcoker-compose" project, and "Unload Project".
  - Launch a rabbitmq container by running in terminal:
@@ -20,7 +20,7 @@ This application can be launched by:
  - Set up a Data Source=(localdb)\MSSQLLocalDB DB localhost. Instructions [here](https://www.sqlshack.com/install-microsoft-sql-server-express-localdb/).
  - Go to main menu Project > "Configure Startup Projects" > "Multiple Startup Projects" and select as start projects: Chat.BlazorChat, Chat.DecoupledBot, Chat.SignalRHub.
  - Press the Start button up there, or the F5 key.
- - Go with the UI/UX.
+ - Go with the UI/UX (yes, it's intuitive, as it should ;) ).
 
 ### Initial/Original Resolution Strategy.
 
@@ -46,7 +46,7 @@ and reusability.
 
 ### Assignment
 The goal of this exercise is to create a simple browser-based chat application using .NET.
-This application should allow several users to talk in a chatroom and also to get stock quotes
+This application should (and will) allow several users to talk in a chatroom and also get stock quotes
 from an API using a specific command.
 
 ### Features
